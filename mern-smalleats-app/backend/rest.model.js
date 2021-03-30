@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 let Rest = new Schema({
-    rest_name: {
+    name: {
         type: String
     },
     rest_cuisine: {

@@ -2,20 +2,20 @@ import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-const Rest = props => (
+const Rest = (props) => (
     <tr>
-        <td className={props.rest.rest_completed ? 'completed' : ''}>{props.rest.rest_name}</td>
-        <td className={props.rest.rest_completed ? 'completed' : ''}>{props.rest.rest_cuisine}</td>
-        <td className={props.rest.rest_completed ? 'completed' : ''}>{props.rest.rest_price}</td>
-        <td className={props.rest.rest_completed ? 'completed' : ''}>{props.rest.rest_rating}</td>
-        <td className={props.rest.rest_completed ? 'completed' : ''}>{props.rest.rest_menu}</td>
+        <td>{props.restaurant.name}</td>
+        <td>{props.restaurant.cuisine}</td>
+        <td>{props.restaurant.cost}</td>
+        <td>{props.restaurant.rating}</td>
+        <td>{props.restaurant.menu}</td>
         <td>
             <Link to={"/edit/"+props.rest._id}>Update</Link>
         </td>
     </tr>
 )
 
-export default class restsList extends Component {
+export default class restaurantsList extends Component {
 
     constructor(props) {
         super(props);

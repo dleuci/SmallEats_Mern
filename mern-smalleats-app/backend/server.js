@@ -57,11 +57,7 @@ restRoutes.route('/update/:id').post(function(req, res) {
         if(!rest)
             res.status(404).send('data is not found');
         else
-            rest.rest_name = req.body.rest_name;
-            rest.rest_cuisine = req.body.rest_cuisine;
-            rest.rest_price = req.body.rest_price;
-            rest.rest_rating = req.body.rest_rating;
-            rest.rest_menu = req.body.rest_menu;
+            restaurant.name = req.body.name;
 
             rest.save().then(rest => {
                 res.json('Rest updated');
