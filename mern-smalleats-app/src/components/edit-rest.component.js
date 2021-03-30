@@ -6,7 +6,11 @@ export default class EditRest extends Component {
     constructor(props) {
         super(props);
 
-        this.onChangerestaurantName  = this.onChangerestaurantName.bind(this);
+        this.onChangerestName  = this.onChangerestName.bind(this);
+        this.onChangerestCuisine = this.onChangerestCuisine.bind(this);
+        this.onChangerestRating = this.onChangerestRating.bind(this);
+        this.onChangerestMenu = this.onChangerestMenu.bind(this);
+        this.onChangerestCost = this.onChangerestCost.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
 
         this.state = {

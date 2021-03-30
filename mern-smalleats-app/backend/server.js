@@ -13,8 +13,11 @@ let Rest = require('./rest.model');
 app.use(cors());
 app.use(bodyParser.json());
 
+// DB Config
+const db = require('./config/keys').mongoURI;
+
 //rests is name of db
-mongoose.connect('mongodb://127.0.0.1:27017/rests', { useNewUrlParser: true });
+mongoose.connect(db);
 const connection = mongoose.connection;
 
 connection.once('open', function() {
@@ -57,7 +60,11 @@ restRoutes.route('/update/:id').post(function(req, res) {
         if(!rest)
             res.status(404).send('data is not found');
         else
-            restaurant.name = req.body.name;
+            rest.rest_name = req.body.rest_name;
+            rest.rest_cuisine = req.body.rest_cuisine;
+            rest.rest_price = req.body.rest_price;
+            rest.rest_rating = req.body.rest_rating;
+            rest.rest_menu = req.body.rest_menu;
 
             rest.save().then(rest => {
                 res.json('Rest updated');
@@ -74,4 +81,3 @@ app.use('/rests', restRoutes);
 app.listen(PORT, function() {
     console.log("Server running on Port: " + PORT);
 });
-
