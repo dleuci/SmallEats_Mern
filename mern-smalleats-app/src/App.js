@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import CreateTodo from "./components/create-todo.component";
-import EditTodo from "./components/edit-todo.component";
-import TodosList from "./components/todos-list.component";
+import AddRestaurant from "./components/add-restaurant.component";
+import EditRest from "./components/edit-rest.component";
+import RestList from "./components/rest-list.component";
 
 import logo from "./SMALL-EATS-LLC-ALT-TRANSPsnip.png";
 
@@ -16,25 +16,25 @@ class App extends Component {
         <div className="container">
           
           <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a className="navbar-brand" href="https://codingthesmartway.com" target="_blank">
-              <img src={logo} width="250" height="75" alt="CodingTheSmartWay.com" />
+            <a className="navbar-brand" href="https://github.com/McKenna242/SmallEats_Mern/tree/master/mern-smalleats-app" target="_blank">
+              <img src={logo} width="250" height="75" alt="github" />
             </a>
-            <Link to="/" className="navbar-brand">MERN-Stack Todo App</Link>
+            <Link to="/" className="navbar-brand">MERN Local Restaurant Tracker</Link>
             <div className="collpase nav-collapse">
               <ul className="navbar-nav mr-auto">
                 <li className="navbar-item">
-                  <Link to="/" className="nav-link">Todos</Link>
+                  <Link to="/" className="nav-link">Restaurants</Link>
                 </li>
                 <li className="navbar-item">
-                  <Link to="/create" className="nav-link">Create Todo</Link>
+                  <Link to="/add" className="nav-link">Add Restaurant</Link>
                 </li>
               </ul>
             </div>
           </nav>
 
-          <Route path="/" exact component={TodosList} />
-          <Route path="/edit/:id" component={EditTodo} />
-          <Route path="/create" component={CreateTodo} />
+          <Route path="/" exact component={RestList} />
+          <Route path="/edit/:id" component={EditRest} />
+          <Route path="/add" component={AddRestaurant} />
         </div>
       </Router>
     );
