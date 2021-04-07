@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+**************************
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+CREATE A NEW BRANCH THEN CHECK OUT THE NEW BRANCH BEFORE STARTING WORK!
 
-## Available Scripts
+*************************
 
-In the project directory, you can run:
+DO NOT CODE ON MASTER BRANCH
 
-### `npm start`
+*************************
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Install the GitHub Pull Requests and Issues extension in VSCode
+Sign into github on VS Code (above the settings wheel)
+Go to the source control option on VS Code (3rd tab on the left list)
+Click the hyperlink to install git with all recommended settings
+Restart VS Code and go back to source control and select clone repository.
+Enter this url https://github.com/McKenna242/SmallEats_Mern into the bar in the top middle of VScode
+Download the config.zip file pinned in the discord for term project
+Unzip the file and place it in the location -> mern-smalleats-app->backend file 
+Now you should have all the files from git downloaded.
+Open them in VSCode and then head to chrome
+Google or go to nodejs.org and install node.js for your computer
+Check automatically install all necessary tools during installation 
+Once it’s installed you need to add node js to your path. This article details how to accomplish that:
+https://www.c-sharpcorner.com/blogs/npm-is-not-recognized-from-visual-studio
+Once node js is added to path open and close vs code and navigate back to the project folder.
+Open mern-smalleats-app in the integrated terminal and type the command 
+npm install
+then
+npm install-all
+This will take a little but it will install all the required local files to run the website. 
+Then install global nodemon
+npm i -g nodemon
+Once the install is finished type
+npm run dev
+This should automatically open a web browser to localhost:3000 and you should be able to see the website. 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+npm run dev will start the server whenever you need to access it moving forward
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+*********************
 
-### `npm run build`
+file meaning info
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+*********************
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Rest.model.js in backend in the model the holds the database structure for the backend.
+Server.js hosts the server and uses rest.model.js to send the database info back, these have to changed together. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+App.js in the src file is the frontend. It imports other frontend items from the components file where new additions should be stored and then imported into app.js for display. 
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
