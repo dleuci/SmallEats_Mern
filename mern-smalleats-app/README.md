@@ -23,7 +23,7 @@ Check automatically install all necessary tools during installation <br />
 Once it’s installed you need to add node js to your path. This article details how to accomplish that:<br />
 https://www.c-sharpcorner.com/blogs/npm-is-not-recognized-from-visual-studio<br />
 Once node js is added to path open and close vs code and navigate back to the project folder.<br />
-Open mern-smalleats-app in the integrated terminal and type the command <br />
+Open mern-smalleats-app (double check that it's mern-smalleats-app) in the integrated terminal and type the command <br />
 npm install<br />
 then<br />
 npm run install-all<br />
