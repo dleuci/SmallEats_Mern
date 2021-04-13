@@ -26,7 +26,7 @@ Once node js is added to path open and close vs code and navigate back to the pr
 Open mern-smalleats-app in the integrated terminal and type the command 
 npm install
 then
-npm install-all
+npm run install-all
 This will take a little but it will install all the required local files to run the website. 
 Then install global nodemon
 npm i -g nodemon
